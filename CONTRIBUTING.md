@@ -13,7 +13,7 @@ There are many ways you can help:
 
 ## Reporting Issues
 
-If you find a bug or have an issue, please check the [open issues](https://github.com/subhamay-bhattacharyya-gha/cloudformation-template/issues) before creating a new one. If it’s not there, feel free to open a new issue and provide as much information as possible.
+If you find a bug or have an issue, please check the [open issues](https://github.com/subhamay-bhattacharyya-gha/3201-migration-cft/issues) before creating a new one. If it’s not there, feel free to open a new issue and provide as much information as possible.
 
 ## Submitting Changes
 
