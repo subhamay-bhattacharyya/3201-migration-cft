@@ -1,7 +1,7 @@
 {
-  "name": "cloudformation-template",
+  "name": "3201-migration-cft",
   "version": "0.0.1",
-  "description": "A GitHub template repository to manage AWS resources using CloudFormation.",
+  "description": "Discover.",
   "license": "MIT",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/subhamay-bhattacharyya/cloudformation-template.git"
+    "url": "https://github.com/subhamay-bhattacharyya/3201-migration-cft.git"
   },
   "keywords": [
     "cloudformation",
@@ -19,7 +19,7 @@
   ],
   "author": "Subhamay Bhattacharyya",
   "bugs": {
-    "url": "https://github.com/subhamay-bhattacharyya/cloudformation-template/issues"
+    "url": "https://github.com/subhamay-bhattacharyya/3201-migration-cft/issues"
   },
-  "homepage": "https://github.com/subhamay-bhattacharyya/cloudformation-template#readme"
+  "homepage": "https://github.com/subhamay-bhattacharyya/3201-migration-cft#readme"
 }
