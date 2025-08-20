@@ -1,0 +1,5 @@
+{
+    "project": "cfn-cicd",
+    "template": "s3-bucket.yaml",
+    "stack-prefix": "s3-bucket"
+}

@@ -1,0 +1,35 @@
+name: CloudFormation Deploy
+run-name: Deploying to ${{ inputs.environment }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy to (e.g., devl, test, prod)"
+        required: true
+        type: environment
+        default: devl
+
+
+jobs:
+  deploy: 
+    name: 🚧 CloudFormation Deploy
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: hello-world 
+        run: echo "Hello World!" 
+
+
+# jobs:
+#   apply:
+#     name: 🚧 Run Terraform Apply
+#     uses: subhamay-bhattacharyya-gha/tf-apply-wf/.github/workflows/terraform-apply.yaml@main
+#     with:
+#       environment: ${{ inputs.environment }}
+#       terraform-dir: ${{ inputs.terraform-dir }}
+#       tf-vars-file: ${{ inputs.tf-vars-file }}
+#       ci-pipeline: false
+#     secrets:
+#       aws-role-arn: ${{ secrets.AWS_ROLE_ARN }}
+#       infracost-api-key: ${{ secrets.INFRACOST_API_KEY }}
+#       infracost-gist-id: ${{ secrets.INFRACOST_GIST_ID }}

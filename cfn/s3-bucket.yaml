@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create an S3 bucket using a parameterized bucket name.
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Name of the S3 bucket to be created.
+    MinLength: "3"
+    MaxLength: "63"
+    AllowedPattern: '^[a-z0-9.-]+$'
+    ConstraintDescription: Bucket name must be lowercase and can include numbers, dots, and hyphens.
+    Default: "subhamay-default-bucket-name-06611"
+  CiBuildId:
+    Type: String
+    Description: Unique identifier for the CI build.
+    Default: ""
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${BucketName}${CiBuildId}"
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: Project
+          Value: "GitHub CI/CD"
+
+
+Outputs:
+  S3BucketName:
+    Description: Name of the created S3 bucket
+    Value: !Ref S3Bucket
+
+  S3BucketArn:
+    Description: ARN of the created S3 bucket
+    Value: !GetAtt S3Bucket.Arn

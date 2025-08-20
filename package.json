@@ -1,0 +1,25 @@
+{
+  "name": "cloudformation-template",
+  "version": "0.0.1",
+  "description": "A GitHub template repository to manage AWS resources using CloudFormation.",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subhamay-bhattacharyya/cloudformation-template.git"
+  },
+  "keywords": [
+    "cloudformation",
+    "aws",
+    "infrastructure-as-code",
+    "iac"
+  ],
+  "author": "Subhamay Bhattacharyya",
+  "bugs": {
+    "url": "https://github.com/subhamay-bhattacharyya/cloudformation-template/issues"
+  },
+  "homepage": "https://github.com/subhamay-bhattacharyya/cloudformation-template#readme"
+}

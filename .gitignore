@@ -1,0 +1,59 @@
+# CloudFormation templates outputs
+*.template.json
+*.template.yaml
+*.stack.yaml
+*.stack.json
+
+# AWS SAM build and cache directories
+.aws-sam/
+.sam-logs/
+
+# TaskCat output
+.taskcat/
+
+# cfn-guard compiled rules or cache
+cfn_guard_rules.cache
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# Node dependencies (if using CDK or supporting tools)
+node_modules/
+
+# Log and debug files
+*.log
+*.out
+*.tmp
+*.bak
+
+# VSCode settings
+.vscode/
+
+# OS / IDE-specific files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# SAM generated files
+event.json
+template-export.json
+
+# Pipenv / poetry / other lock files
+Pipfile.lock
+poetry.lock
+
+# Coverage reports
+.coverage
+htmlcov/
+coverage.xml
+
+# Test output
+test-output/

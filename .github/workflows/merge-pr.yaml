@@ -1,0 +1,39 @@
+name: Create Release
+run-name: Merge Pull Request run by ${{ github.actor }} on ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - 'README.md'
+      - '.github/**'
+      - 'CODEOWNERS'
+      - 'LICENSE'
+      - 'VERSION'
+      - 'CHANGELOG.md'
+      - 'CODE_OF_CONDUCT.md'
+      - 'CONTRIBUTING.md'
+      - '*.sh'
+      - '*.txt'
+      - '*.json'
+      - '.gitignore'
+      - '.editorconfig'
+      - '.pre-commit-config.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+  # actions: read
+
+
+jobs:
+  cloudformation-merge-pr:
+    name: CI
+    uses: subhamay-bhattacharyya-gha/cfn-release-wf/.github/workflows/merge-pr.yaml@feature/GHA-0001-initial-release
+    with:
+      environment: "ci"
+      cfn-directory: "cfn"
+    secrets:
+      aws-role-arn: ${{ secrets.AWS_ROLE_ARN }}

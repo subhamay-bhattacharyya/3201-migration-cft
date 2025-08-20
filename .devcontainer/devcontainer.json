@@ -1,0 +1,28 @@
+{
+  "name": "CloudFormation Tools Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "/usr/local/bin/install-tools.sh --tools=all > /tmp/post-create.log 2>&1",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "aws-scripting-guy.cfn-lint",
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "mechatroner.rainbow-csv",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "cfnLint.path": "/usr/local/bin/cfn-lint",
+        "yaml.schemas": {
+          "https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json": "*.template.yaml"
+        }
+      }
+    }
+  }
+}

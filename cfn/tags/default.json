@@ -1,0 +1,6 @@
+{
+    "ProjectName": "subhamay-github-action-template",
+    "ProjectDescription": "A GitHub Action template for managing AWS resources using CloudFormation.",
+    "SupportEmail": "subhamay.aws@gmail.com",
+    "Environment": "devl"
+}
